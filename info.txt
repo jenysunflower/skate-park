@@ -1,0 +1,6 @@
+Faltaron algunas validaciones que no fueran solo en el HTML, sino de backend.
+Faltó validar que el mail no se repita. 
+Faltan claramente mejoras de usabilidad.
+Cree la ruta admin, pero no logré cambiar de estado al usuario
+El pool de conexión quedó en consultas.js, deber;ia ir en un .env
+dejé un video de como funcionaba en algunos puntos

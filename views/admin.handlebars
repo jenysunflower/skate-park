@@ -1,0 +1,32 @@
+<h2>Lista de Skaters (Vista de Administrador)</h2>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Años de experiencia</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each skaters}}
+        <tr>
+            <th scope="row">{{this.id}}</th>
+            <td><div><img src="{{this.foto}}" alt="{{this.nombre}}" /></div></td>
+            <td>{{this.nombre}}</td>
+            <td>{{this.anos_experiencia}}</td>
+            <td>{{this.especialidad}}</td>
+            <td>
+                <input type="checkbox" {{#if this.estado}}checked{{/if}} data-skater-id="{{this.id}}" />
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm actualizar-estado" data-skater-id="{{this.id}}">Actualizar</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
